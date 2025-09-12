@@ -798,7 +798,14 @@ function populateClasses(){
   renderSubjects();
   renderTable();
 }
-
 </script>
+
+ <script>
+                var motDePasse = prompt("Entrer le mot de pass pour accéder au cours :")
+                 if (motDePasse !== "Fatima") {
+                    alert("mot de pass incorrect !");
+                    window.location.href = "https://www.google.com"; // redirige ailleurs
+                 }
+            </script>
 </body>
 </html>
