@@ -74,10 +74,10 @@
 <label class=small-label>Âge</label>
 <input id=age type=number min=4 max=25 value=10>
 </div>
-<div style=flex:1>
-<label class=small-label>Scolarité</label>
-<select id=schooling><option>Régulier</option><option>Redoublant</option></select>
-</div>
+<script>
+  const select = document.getElementById('schooling');
+  select.innerHTML = [...Array(9).keys()].map(i => `<option value="${i+1}">${i+1} an${i>0?'s':''}</option>`).join('') + `<option value="redoublant">Redoublant</option>`;
+</script>
 </div>
 <h4 style=margin-top:12px>Matières — saisie des notes</h4>
 <div id=notesGrid class=notes-grid aria-live=polite></div>
