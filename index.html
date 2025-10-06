@@ -10,7 +10,151 @@
 <script src=https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js></script>
 <style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:Inter,"Segoe UI",Roboto,Arial,sans-serif;background:#f4f8ff;color:#06243a}.container{max-width:1200px;margin:18px auto;padding:16px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px;border-radius:10px;background:linear-gradient(90deg,#1e3a8a,#2563eb);color:#fff}.brand{display:flex;align-items:center;gap:12px}.logo-inline{display:flex;gap:8px;align-items:center}.logo-inline img{width:52px;height:52px;border-radius:6px;background:#fff;padding:6px;object-fit:contain}.brand h1{font-size:18px;margin:0}.top-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.top-actions input[type=file]{display:inline-block}.top-actions button{padding:8px 12px;border-radius:8px;border:0;background:#fff;color:#1e40af;font-weight:700;cursor:pointer}.grid{display:grid;grid-template-columns:380px 1fr;gap:16px;margin-top:18px}@media(max-width:920px){.grid{grid-template-columns:1fr}}.card{background:#fff;border-radius:12px;padding:14px;box-shadow:0 8px 22px rgba(15,23,42,.06)}.small-label{display:block;font-weight:700;margin-bottom:6px;color:#123049}input[type=number],input[type=text],select{padding:8px;border-radius:8px;border:1px solid #e6eefc;width:100%}.form-row{display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap}.notes-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px;margin-top:10px}.note-item{display:flex;flex-direction:column}.note-item label{font-weight:600;font-size:13px;margin-bottom:6px;color:#23475a}.actions{display:flex;gap:8px;margin-top:12px;align-items:center;flex-wrap:wrap}.btn{padding:8px 12px;border-radius:8px;border:0;background:#2563eb;color:#fff;cursor:pointer;font-weight:700}.btn.ghost{background:0 0;border:1px solid #2563eb;color:#2563eb}.btn.warn{background:#ef4444}.btn.neutral{background:#0ea5e9}.avg-box{margin-left:auto;font-weight:800;color:#0f172a}.table-wrap{overflow:auto;margin-top:10px}table{width:100%;border-collapse:collapse;min-width:820px}td,th{padding:8px;border-bottom:1px solid #eef6ff;text-align:center}thead th{background:#f1f7ff;font-weight:800;position:sticky;top:0}tbody tr:hover{background:#f8fafc;cursor:pointer}tbody tr.selected{background:#fff7cc}.context-badge{display:inline-block;background:#e6f0ff;color:#08325a;padding:6px 10px;border-radius:999px;font-weight:700;margin-left:8px}footer{padding:12px;text-align:center;color:#5b6b7a;margin-top:18px}@media(max-width:700px){.notes-grid{grid-template-columns:repeat(auto-fill,minmax(120px,1fr))}}.col-actions{position:sticky;right:0;background:#fff}.mini{padding:4px 8px;border-radius:6px;font-weight:700;border:1px solid #dbeafe;background:#eff6ff;color:#1d4ed8;cursor:pointer}</style>
 </head>
-<body>
+<body style="font-family:Arial,sans-serif; padding:15px; background:#FFF8F0;">
+
+<section>
+  <!-- Bouton toggle documentation -->
+  <button id="toggle-doc" style="background:#8B4513; color:#FFC0CB; border:none; padding:10px 15px; border-radius:5px; cursor:pointer; margin-bottom:10px;">
+    Afficher Documentation
+  </button>
+
+  <!-- Section Documentation -->
+  <section id="documentation" style="display:none; padding:15px; border:1px solid #8B4513; border-radius:10px; background:#FFF0F5;">
+    <h1 style="color:#8B4513; display:flex; align-items:center;">
+      Gestion des Notes Multi-Matières
+      <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" 
+           alt="Animation éducative" style="width:50px; margin-left:10px;">
+    </h1>
+
+    <p>
+      <img src="https://img.shields.io/badge/GitHub-Pages-blue" alt="GitHub Pages">
+      <img src="https://img.shields.io/badge/Licence-MIT-green" alt="Licence MIT">
+    </p>
+
+    <p>
+      Une application web interactive pour gérer les notes scolaires des élèves.<br>
+      Permet l'ajout d'élèves, la saisie des notes par matière, le calcul automatique des moyennes et l'exportation des données.<br>
+      Accessible depuis un navigateur, responsive et sans serveur.
+    </p>
+
+    <hr>
+    <h2>Démonstration</h2>
+    <p>
+      <img src="demo.gif" alt="Démonstration de l'application" style="max-width:100%;"><br>
+      <em>Remplace <code>demo.gif</code> par le fichier GIF réel dans le dépôt.</em>
+    </p>
+
+    <hr>
+    <h2>Fonctionnalités</h2>
+    <ul>
+      <li>Ajouter, modifier et supprimer des élèves</li>
+      <li>Saisie des notes par matière</li>
+      <li>Calcul automatique des moyennes</li>
+      <li>Export des notes en PDF individuel avec rang automatique</li>
+      <li>Export de toutes les fiches en ZIP</li>
+      <li>Stockage local dans le navigateur (LocalStorage)</li>
+      <li>Design responsive pour mobile et tablette</li>
+    </ul>
+
+    <hr>
+    <h2>Technologies utilisées</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript (vanilla)</li>
+      <li>LocalStorage pour le stockage local</li>
+    </ul>
+
+    <hr>
+    <h2>Déploiement</h2>
+    <p>
+      Le projet est hébergé sur GitHub Pages :<br>
+      <a href="https://g-mansour1977.github.io/Gestion_Notes-Multi-Mati-res-9/">Accéder à l'application</a>
+    </p>
+
+    <h3>Installation locale (facultatif)</h3>
+    <ol>
+      <li>Cloner le dépôt : 
+        <code>git clone https://github.com/g-mansour1977/Gestion_Notes-Multi-Mati-res-9.git</code>
+      </li>
+    </ol>
+
+    <hr>
+    <h2>Actions PDF</h2>
+    <button onclick="exportAllPDFsAsZip()" 
+            style="background:#8B4513; color:#FFC0CB; padding:10px 15px; border:none; border-radius:5px; cursor:pointer; margin-top:10px;">
+      Exporter toutes les fiches en ZIP
+    </button>
+  </section>
+</section>
+
+<script>
+// Toggle Documentation
+const toggleBtn = document.getElementById('toggle-doc');
+const docSection = document.getElementById('documentation');
+
+toggleBtn.addEventListener('click', () => {
+  if(docSection.style.display === "none") {
+    docSection.style.display = "block";
+    toggleBtn.textContent = "Cacher Documentation";
+  } else {
+    docSection.style.display = "none";
+    toggleBtn.textContent = "Afficher Documentation";
+  }
+});
+
+// Exemple de données dans localStorage
+localStorage.setItem('students', JSON.stringify([
+  {id: 1, name: 'Mansour', class: 'CI', average: 15.5},
+  {id: 2, name: 'Awa', class: 'CI', average: 17.2},
+  {id: 3, name: 'Ali', class: 'CI', average: 12.8}
+]));
+
+// PDF individuel avec rang automatique
+function generateIndividualPDF(student) {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
+  
+  const students = JSON.parse(localStorage.getItem('students')) || [];
+  students.sort((a, b) => b.average - a.average);
+  const rank = students.findIndex(s => s.id === student.id) + 1;
+
+  doc.setFontSize(16);
+  doc.text(`Nom : ${student.name}`, 10, 20);
+  doc.text(`Classe : ${student.class}`, 10, 30);
+  doc.text(`Moyenne : ${student.average.toFixed(2)}`, 10, 40);
+  doc.text(`Rang : ${rank}`, 10, 50);
+
+  doc.save(`${student.name}_notes.pdf`);
+}
+
+// Export ZIP avec toutes les fiches
+function exportAllPDFsAsZip() {
+  const { jsPDF } = window.jspdf;
+  const students = JSON.parse(localStorage.getItem('students')) || [];
+  const zip = new JSZip();
+
+  students.sort((a, b) => b.average - a.average);
+
+  students.forEach(student => {
+    const rank = students.findIndex(s => s.id === student.id) + 1;
+    const doc = new jsPDF();
+    doc.setFontSize(16);
+    doc.text(`Nom : ${student.name}`, 10, 20);
+    doc.text(`Classe : ${student.class}`, 10, 30);
+    doc.text(`Moyenne : ${student.average.toFixed(2)}`, 10, 40);
+    doc.text(`Rang : ${rank}`, 10, 50);
+
+    zip.file(`${student.name}_notes.pdf`, doc.output('blob'));
+  });
+
+  zip.generateAsync({ type: "blob" }).then(content => {
+    saveAs(content, "Fiches_Notes.zip");
+  });
+}
+</script>
+
+
 <div class=container>
 <header class=topbar>
 <div class=brand>
